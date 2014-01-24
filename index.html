@@ -1,49 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 <head>
-  <link rel="stylesheet" href="bootstrap.min.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>fratspeak</title>
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
 
-  <title>Markov Sample</title>
-  <script type="text/javascript" src="markov.js"></script>
-  <script type="text/javascript" src="json2.js"></script>
-  <script type="text/javascript" src="corpus.js"></script>
-  <script type="text/javascript">
-    var markovSpain, markovSherlock;
+
+	<script type="text/javascript" src="markov.js"></script>
+	<script type="text/javascript" src="json2.js"></script>
+	<script type="text/javascript" src="corpus.js"></script>
+	<script type="text/javascript">
+	var markovSpain, markovSherlock;
 	window.onload = onLoad;
 	function doFunction() {
-      // x = new markov(text, type, regex); 
+      // x = new markov(text, type, regex);
+
 	  markov3 = new markov(corpus, "string", /([.,?"();\-!':—^\w]+ ){3}/g); 
-	  markov4 = new markov(corpus, "string", /([.,?"();\-!':—^\w]+ ){4}/g); 
-      
-      var finaled = "";
-      var outString = "";
-	  var temp = "";
-	  var temp1 = "";
-      for (var i = 0; i < 1; i++) {
-		temp = markov3.gen(4).trim() + "."+ "<p>";
-		temp1 = temp[0].toUpperCase() + temp.slice(1).toLowerCase();
-		finaled += temp1;
-      }
-      outString += "<h1>what the kids in greek life are saying</h1>";
-      outString += finaled;
-      
-	  document.getElementById("output").innerHTML = outString;
+
+	 var finaled = "";
+	 var outString = "";
+	 var temp = "";
+	 var temp1 = "";
+	 for (var i = 0; i < 1; i++) {
+	 	temp = markov3.gen(4).trim() + "."+ "<p>";
+	 	temp1 = temp[0].toUpperCase() + temp.slice(1).toLowerCase();
+	 	finaled += temp1;
+	 }
+	 outString += finaled;
+
+	 document.getElementById("output").innerHTML = outString;
 
       //document.write(outString);
-    }
-	function onLoad() {
-		  document.getElementById("output").innerHTML = "<h1>what the kids in greek life are saying</h1>They sound kinda stupid";
+  }
+  function onLoad() {
+  	document.getElementById("output").innerHTML = "They sound kinda stupid";
 
-	}
+  }
   </script>
 </head>
 <body>
-<div class="row" style ='background-color: #2ba6cb;'>
-	<div class="container">
-		<div class="jumbotron">
-			<p id="output"></p>
-			<button type="button" class="btn btn-lg btn-success" onclick="javascript:doFunction();">Tell me More...</button>
+	<div id="scroll-wrap" class="container">
+		<header class="codrops-header">
+			<h1>what the kids in greek life are saying<span>fratspeak</span></h1>	
+		</header>
+		<div class="main clearfix">
+			<div class="column">
+				<p id="output"></p>
+			</div>
+			<div class="column">
+				<p><button id="showMenu" type="button" onclick="javascript:doFunction();">Tell me More...</button></p>
+			</div>
+		</div><!-- /main -->
+		<div class="related">
+			<a href="">
+				<h3>About fratspeak</h3>
+			</a>
 		</div>
-	</div>
-</div>
+	</div><!-- /container -->
+</div><!-- /bb-custom-wrapper -->
 </body>
 </html>

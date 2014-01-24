@@ -1,0 +1,21 @@
+/* Colors */
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container.hide-overflow { overflow: hidden }
+
+.main {
+    margin: 4em auto 0;
+    max-width: 1200px;
+    width: 100%;
+}
