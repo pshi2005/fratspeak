@@ -1,0 +1,40 @@
+.about_text {
+	padding: 0 2em;
+}
+
+.about_text h2 {
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	color: #0098b9;
+}
+
+.about_text p {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+.about_text p a {
+	color: #2a6496;
+}
+
+.about_text p a:hover {
+	color: #ddd;
+}
+
+ul {
+	list-style-type: rounded;
+}
+
+ul li {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+ul li a {
+	color: #2a6496;
+}
+
+ul li a:hover {
+	color: #ddd;
+}
