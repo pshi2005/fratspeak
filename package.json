@@ -1,6 +1,6 @@
 {
   "name": "helloworld",
-  "version": "0.0.0",
+  "version": "0.10.25",
   "description": "hello world",
   "main": "web.js",
   "scripts": {
