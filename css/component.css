@@ -22,4 +22,5 @@ body {
 
 #output {
 	text-transform: lowercase;
+	text-align: center;
 }
